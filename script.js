@@ -2,7 +2,7 @@
 const background = document.getElementById('background');
 let mouseX = 0, mouseY = 0; // Zielposition der Maus
 let currentX = 0, currentY = 0; // Aktuelle Position des Flecks
-const dampeningFactor = 0.5; // Je kleiner, desto langsamer folgt der Fleck
+const dampeningFactor = 0.01; // Je kleiner, desto langsamer folgt der Fleck
 
 // Eventlistener für die Mausbewegung
 document.addEventListener('mousemove', (e) => {
