@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Product+Sans&display=swap');
+
+body {
+    font-family: 'Product Sans', sans-serif;
+    background-color: black;
+    background: radial-gradient(20vh 20vh at center, rgb(0, 0, 255, 1) 1%, rgb(0, 0, 255, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+    background-size: 100% 100%;
+    height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+  
+h1 {
+    text-align: center;
+    font-size: 5vh;  
+    margin-top: 0;
+    vertical-align: middle;
+  }
+
+#platforms {
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(25, 25, 25, 0.7);
+    border-radius: 4vh;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0.8%;
+}
+
+.platform {
+    display: flex;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0.4vh;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s;
+  }
+
+.platform:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.platform img {
+    height: calc(2/3*100%);
+    width: calc(2/3*100%);
+}
+
+#header {
+  color: white;
+  padding: 2vh;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 8px 0;
+  border-bottom: 1px;
+  text-align: center;
+  font-size: 2vh;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+/* Link styles */
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 2px 4px;
+  transition: all 0.5s;
+}
+
+a:hover {
+  font-size: 3vh;
+  text-decoration: underline;
+}
+
+/* If links are in list items */
+li a {
+  display: block;
+  width: 100%;
+}
+
+#waving-hand {
+  height: 5vh;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+#waving-hand:hover {
+  animation: wave 1s ease-in-out;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-10deg); }
+  60% { transform: rotate(15deg); }
+  80% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
