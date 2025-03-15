@@ -95,21 +95,31 @@ li a {
   width: 100%;
 }
 
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(20deg); }
+  30% { transform: rotate(-10deg); }
+  45% { transform: rotate(15deg); }
+  60% { transform: rotate(-5deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Standard-Styling */
 #waving-hand {
   height: 5vh;
   cursor: pointer;
-  transition: all 0.5s;
+  display: inline-block;
 }
 
+/* Dauerschleifen-Animation auf Mobilgeräten */
+@media (hover: none) {
+  #waving-hand {
+    animation: wave 1.5s ease-in-out infinite;
+  }
+}
+
+/* Nur beim Hover auf Desktop */
 #waving-hand:hover {
-  animation: wave 1s ease-in-out;
-}
-
-@keyframes wave {
-  0% { transform: rotate(0deg); }
-  20% { transform: rotate(15deg); }
-  40% { transform: rotate(-10deg); }
-  60% { transform: rotate(15deg); }
-  80% { transform: rotate(-5deg); }
-  100% { transform: rotate(0deg); }
+  animation: wave 1.5s ease-in-out;
 }

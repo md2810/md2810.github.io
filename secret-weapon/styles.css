@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Product+Sans&display=swap');
+
+body {
+    font-family: 'Product Sans', sans-serif;
+    background-color: black;
+    color: white;
+    display: flex; /* Flexbox aktivieren */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    height: 100vh; /* Volle Höhe des Viewports */
+    margin: 0; /* Standard-Margin entfernen */
+}
+
+h1 {
+    text-align: center;
+    width: 80vw;
+    font-size: clamp(1rem, 10vw, 8rem); /* Dynamische Schriftgröße */
+    white-space: nowrap; /* Verhindert Umbrüche */
+    overflow: hidden; /* Falls der Text zu lang wird */
+    text-overflow: ellipsis; /* Optional */
+}
