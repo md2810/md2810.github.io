@@ -1,6 +1,7 @@
 let targetX = window.innerWidth / 2; // Startposition
     let targetY = window.innerHeight / 2;
     let clicks = 0;
+    let resetTimer;
     let currentX = targetX; // Anfangsposition des Gradients
     let currentY = targetY;
 
@@ -23,11 +24,17 @@ let targetX = window.innerWidth / 2; // Startposition
     }
 
     function countUp() {
-      clicks = clicks + 1;
-      if (clicks == 3) {
+      clicks += 1;
+      
+      if (clicks === 3) {
         console.log("Allahu Akbar!");
         window.location.replace("/secret-weapon");
       }
+    
+      clearTimeout(resetTimer);
+      resetTimer = setTimeout(() => {
+        clicks = 0;
+      }, 1000);
     }
 
     animate(); // Animation starten
